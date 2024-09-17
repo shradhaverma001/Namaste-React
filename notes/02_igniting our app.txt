@@ -1,0 +1,81 @@
+npm - It is a package manager. It contains different packages which we can use in our application.
+command - npm init
+
+packages are also known as dependencies.
+package.json file is a configuration for npm.
+
+important package we need to install is - bundeler(libraries).
+egs of bundeler - webpack, veet, parcel
+why we need bundeler- it packaged your app so that it can be pushed to production.
+
+- to install parcel into application - 
+npm install -D <package name> (parcel)
+we have 2 types of dependencies that we can install
+1) dev dependencies - dependencies which are required in devlopment phase
+2) normal dependencies - dependencies which are used in production.
+
+-D => means its a dev dependency
+
+to install parcel in our application
+npm install -D parcel
+
+- difference b/w caret(^) and tilde(~) in package.json file written along with version
+=> caret means if any minor new verion comes later, it will automatically update it, but not major versions. 
+=> tilde means if any major versioncomes, it can also update it to major versions as well.
+
+- diiff b/w package.json file and package-lock.json file 
+=> package.json contains approx versions of the packages installed and 
+package-lock.json will store the exact version of all the packages installed
+
+node_modules folder acts like a database of the dependencies.
+see when we insatll parcel, it also has its own dependencies, so those dependencies will also get installed 
+which are also having other dependencies, it is known as TRANSITIVE DEPENDENCIES.
+
+the integrity which is maintained in package.json contains hashed code to ensure same code should be there on local and production.
+
+If u have package.json and package-lock.json, we can regenerate the node_modules (so no need to put node_modules folder on github).
+to regenerate it use command- npm install
+
+to ignite our app
+command - npx parcel 
+
+npx - use to execute a package
+
+NOT A GOOD PRACTISE TO USE CDN LINKS. WHY?
+because it is connecting to outside server, i.e its making a network call. So we can install react using npm.
+npm install react
+npm insatll react-dom
+
+to start server -
+command - npx parcel index.html
+
+ADVANTAGES OF PARCEL
+- Dev Build (creates a dev build)
+- Local Server (creates a local server)
+- HMR - Hot Module Replacement (after making changes as soon as we save the file, it automatically refreshes our page.)
+It is because parcel uses a File Watching Algorithm - written in C++
+- Caching - Faster Builds (It does Caching which helps in Faster Builds (can see a parcel-cache folder on left side in directory structure))
+- Image Optimization
+- Minification
+- Bundling
+- Compress (for making code production build ready) 
+- Diagnostic (helps in Error Handling)
+- Tree Shaking
+- Content Hashing 
+-Differnatial Bundling (to support older versions of browsers)
+
+READ THESE IN OFFICIAL DOC OF PARCEL
+
+we type='module' in script tag along with App.js file, otherwise browser will treat that as a normal js file and will give error.
+
+to create a build ready for production 
+command - npx parcel build index.html
+
+also it will throw error as for parcel entry point is written in package.json under => main: "App.js"
+So remove that line from package.json
+
+about browsersList => used to make ur application compatible to older versions
+
+
+
+

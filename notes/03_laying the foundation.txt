@@ -1,0 +1,46 @@
+lesson - 3
+
+adding scripts to start (dev build) and build (prod build) our project
+in package.json, go to script tag, u can see/add which command u can use to run the project.
+
+so to run dev build, instead of writing "npx parcel index.html" use npm run start or npm start.
+so to run prod build, instead of writing "npx parcel build index.html" use npm run build (npm build will not work).
+
+FUNDAMENTALS FOF REACT
+
+react.createElement is an object. When we write root.render, reactDom will convert that object to HTML and push it to browser.
+push it to browser means it will replace everything present inside that root(oe wherever u are rendering) not append(rember akshay is here got replaced)
+
+JSX - is a JS syntax which is easier to create react elements
+JSX - not HTML in JS. Its different. It has HTML-like syntax or XML-like.
+
+create react elemnt using core react
+const heading = React.createElement("h1", {id: "heading"}, "Namaste React🚀");
+
+create react elemnt using JSX
+const heading = <h1 id="heading">Namaste JS from JSX</h1>
+
+JSX code is transpiled before it goes to JS Engine. (transpiled means it is converted to react.createElement only. if u console both will give an object).
+which is done by another library called babel
+
+in JSX we use camelCase for attributes
+if u write JSX in multiple lines always use parenthesis().
+
+REACT COMPONENT
+A React component is a reusable, independent piece of code that's used to build user interfaces for React applications
+2 TYPES
+- CLASS BASED COMPONENT (OLD WAY)
+- FUNCTION BASED COMPONENT(NEW WAY)
+
+Always use first letter as capital letter to make JSX understand that its a component.
+
+- FUNCTION BASED COMPONENT => A javscript function that returns a JSX is a react functional component.
+
+Rendering a component inside another component is also known as COMPONENT COMPOSITION.
+to add any JS code inside any component use {}.
+
+CROSS SITE SCRIPTING ATTACKS
+let say we are calling an API. and by any change it's a bad API(contains malicious code by attackers)
+we are injecting it using {} into our browser or our application. This is known as cross site scripting attacks.
+JSX helps in preventing those. whenever the code is running, it automatically detects it, if its malicious, it will escape it.(will not run it)
+ 

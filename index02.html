@@ -1,0 +1,25 @@
+<!-- Hello World using React -->
+ <!-- IMPORTANT => ORDER OF FILE MATTERS
+  If we write app.js script tag first before the react injecting tag, it will throw error. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <h1>hello from top of root</h1>     <!--this will work normally only the root content will be replaced react code-->
+    <div id="root">
+        <h1>Akshay is here!</h1>  <!--this will be replaced by the react code very fast since render will take control and replace it-->
+    </div>
+    <h1>hello from below of root</h1>
+
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script type="module" src="./App.js"></script>
+</body>
+</html>
