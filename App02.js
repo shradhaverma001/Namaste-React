@@ -39,3 +39,40 @@ console.log(parent); //returns an object
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
+
+
+
+
+
+
+// App03.js
+// import React from "react";
+// import ReactDOM from "react-dom";
+
+// React Element
+const jsxHeading = (
+    <h1 id="heading" className="head" tabIndex="5">Namaste react from JSX❤️</h1>
+);
+console.log(jsxHeading);
+
+// React functional component syntaxes
+const HeadingComponent1 = () => {
+    return <h1 className="heading">Namaste Javascript from functional component1</h1>
+};
+
+const number = 5000;
+const HeadingComponent2 = () => (
+    <div id="container">
+        {jsxHeading}
+        {1000}
+        {number}
+        {HeadingComponent1()}       
+        <HeadingComponent1/>
+        <h1 className="">Namaste Javascript from functional component🚀</h1>
+    </div>
+);
+// Both the above syntax are same it is returning a JSX.
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// root.render(<HeadingComponent2 />);

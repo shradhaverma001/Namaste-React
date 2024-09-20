@@ -1,0 +1,9 @@
+- In CSS,
+if u want space between two divs(one towards left and other towards right) present in main div, use 
+justify-content: space-between;  => property
+
+if u want to display list items in one line instead of in points form, use
+display : flex;
+
+if u want to remove points from the list, use
+list-style-type: none;
