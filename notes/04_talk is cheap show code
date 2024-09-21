@@ -7,3 +7,32 @@ display : flex;
 
 if u want to remove points from the list, use
 list-style-type: none;
+
+if u want to replicate cards not only in one line but below that also, use
+flex-wrap: wrap;
+
+for adding hover css, use
+.className:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+React props - these are properties. It creats a object which can be passed to component.
+Suppose u want to replicate (reuse) some functional component. So props are arguments that are passed to functional component(similar to arguments in function).
+
+INDUSTRIAL LINGUALS
+- destructuring on the fly - when we destruce the props and write the props separately. as a JS object.
+{{rename, cuisine}}
+
+- config driven UI (helpful in System Design Interview)
+It means UI is driven by config(data). Suppose u are in delhi, so food restaurents will be shown of delhi if in dehradun, so restaurents options will be of dehradun
+This means UI is getting changed according to data
+
+
+READ ABOUT OPTIONAL CHAINING
+
+=> VERY IMPORTANT
+WHY DO WE NEED KEYS?
+Keys -> render
+-> React says that don't use index as keys - its bad practise- if the order of items may change
+list and keys - react official doc
