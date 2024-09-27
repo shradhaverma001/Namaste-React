@@ -1,10 +1,10 @@
-FOLDER STRUCTURE
+FOLDER STRUCTURE🚀
 1) make folder for the components, name the component file as the name of the component(first letter capital).
 2) always ensure to export the component and import it where it is used.
 3) for the hard coded statements(code), make seperate file can be named as constants.js and while adding the urls or anything hardcoded, 
 always declare them in CAPITAL LETTERS.
 
-4) TWO TYPES OF EXPORT/IMPORT
+4) TWO TYPES OF EXPORT/IMPORT🚀
 - DEFAULT EXPORT/IMPORT - for one export/import
 export default Component;
 import Component from "path";
@@ -15,3 +15,28 @@ import {Component} from "path";
 
 QUESTION -
 Can we use default export along with named export in a file.
+
+# HOOKS🚀
+REACT helps in DOM manipulation efficiently. All framworks are used because of this.
+It will be cool that just when we clicked a button to filter out the restaurants, the UI will automatically gets changed.
+react is making our application Fast because it is efficient in DOM operations.
+React keeps the data layer in sync with the UI using hooks. As soon as the State Varible, react automatically refreshes that component.
+
+For now, we used JS variable to keep the list of restaurants.
+For DOM manipulation, we will use STATE VARIABLE provided by React.
+
+So this superpower is provided by REACT which is hooks.
+
+Hooks is basically a plain JS function.
+React hook is a normal JS utility function given by react.
+
+
+=> IMPORTANT🚀
+Whenever a State Varible updates, React rerenders the component.
+
+MOST IMPORTANT HOOKS
+1) useState() - It will change the state of a function.
+2) useEffect() - 
+
+useState()🚀
+Syntax - let [name, setName] = useState([default(initial) value of name]) 

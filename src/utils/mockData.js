@@ -13,7 +13,7 @@ const resList = [
           "Tibetan",
           "Desserts"
         ],
-        "avgRating": 4.3,
+        "avgRating": 3.1,
         "parentId": "61955",
         "avgRatingString": "4.3",
         "totalRatingsString": "1.1K+",
@@ -675,7 +675,7 @@ const resList = [
         "cuisines": [
           "American"
         ],
-        "avgRating": 4.5,
+        "avgRating": 3.8,
         "parentId": "630",
         "avgRatingString": "4.5",
         "totalRatingsString": "8.8K+",
@@ -782,7 +782,7 @@ const resList = [
           "Rolls & Wraps",
           "Fast Food"
         ],
-        "avgRating": 4.2,
+        "avgRating": 3.5,
         "parentId": "547",
         "avgRatingString": "4.2",
         "totalRatingsString": "11K+",
