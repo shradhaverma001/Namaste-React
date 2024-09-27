@@ -36,3 +36,21 @@ WHY DO WE NEED KEYS?
 Keys -> render
 -> React says that don't use index as keys - its bad practise- if the order of items may change
 list and keys - react official doc
+
+/**  Planning
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * Body
+ *  - Search
+ *  - Restaurant Container
+ *    - Restaurant Cards
+ *    - Name, cuisine, ETA(Estimatedc time of arrival)
+ *  Footer
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
+
+*/
+

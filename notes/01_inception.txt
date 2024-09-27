@@ -1,5 +1,15 @@
 What is CDN?
+Content Delivery Networks. 
+These are the websiters where React(or any other library) is hosted and we pull React into our projects.
 
 What is crossorigin?
 
 About React.createElement - 
+React.createElement needs 3 arguments-
+1st - Element(tag)
+2nd - Object (Attributes which should be applied to that tag)
+3rd - What to write in that tag(children or content).
+React.createElement is an Object which is converted to HTML which a browser understands.
+When we render it inot DOM, it is converts the React Element to HTML.
+
+React is a JS library not a framework. Its a UI library

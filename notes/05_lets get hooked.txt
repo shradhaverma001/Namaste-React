@@ -1,0 +1,17 @@
+FOLDER STRUCTURE
+1) make folder for the components, name the component file as the name of the component(first letter capital).
+2) always ensure to export the component and import it where it is used.
+3) for the hard coded statements(code), make seperate file can be named as constants.js and while adding the urls or anything hardcoded, 
+always declare them in CAPITAL LETTERS.
+
+4) TWO TYPES OF EXPORT/IMPORT
+- DEFAULT EXPORT/IMPORT - for one export/import
+export default Component;
+import Component from "path";
+
+- NAMED EXPORT/IMPORT - if u want to export multiple things feom one file, use named export
+export const Component;
+import {Component} from "path";
+
+QUESTION -
+Can we use default export along with named export in a file.
