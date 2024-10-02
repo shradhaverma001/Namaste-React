@@ -40,3 +40,26 @@ MOST IMPORTANT HOOKS
 
 useState()🚀
 Syntax - let [name, setName] = useState([default(initial) value of name]) 
+
+Virtual DOM🚀
+Virtual DOM is basically a normal JS object.
+It is the virtual representation of the actual DOM
+When we create the tags in react. It is basically stored as a JS object(containing div and nested divs). That JS object is virtual DOM.
+u can say react basically converts the JSX to JS object. This JS object is Virtual DOM.
+Its the object representation of the html tags, u can say.
+
+This (below) whole thing is known as React Fiber.🚀 
+
+Reconciliation Algorithm🚀 
+Whenever something changes in UI. It is known as Reconciliation.
+
+Diff Algorithm🚀
+Diff Algorithm is used to find the difference between the previous Virtual DOM and new Virtual DOM and then updates the Actual DOM.
+Whenever a UI is changes, react compare the old virtual DOM and new Virtual DOM and then updates the Actual virtual DOM.
+It compares the previous object and the new object. It does not touch HTML code. When it identfies the difference, then it will update the actual DOM.
+
+React helps to keep track and sync the UI layer with the data layer.
+
+Shimmer UI🚀
+To improve user experience while the data is being fetched from the API, instead of showing any loading icon, use Shimmer UI. 
+It is basically a fake page that is loaded while the data is being fetched.
