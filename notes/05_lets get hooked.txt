@@ -59,7 +59,3 @@ Whenever a UI is changes, react compare the old virtual DOM and new Virtual DOM 
 It compares the previous object and the new object. It does not touch HTML code. When it identfies the difference, then it will update the actual DOM.
 
 React helps to keep track and sync the UI layer with the data layer.
-
-Shimmer UI🚀
-To improve user experience while the data is being fetched from the API, instead of showing any loading icon, use Shimmer UI. 
-It is basically a fake page that is loaded while the data is being fetched.

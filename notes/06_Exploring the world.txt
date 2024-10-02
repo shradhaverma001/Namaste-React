@@ -29,7 +29,7 @@ Loads -> API -> Render
 2) As soon as the application loads, we will render the UI skeleton, then API is called, when data comes, then UI is rerendered.
 Loads -> Render -> API -> Rerendered
 
-2nd approach should be used. As it gives user, a better experience while visiting the application. User will not see/face the freexing page, while the API is being called.
+2nd approach should be used. As it gives user, a better experience while visiting the application. User will not see/face the freezing page, while the API is being called.
 
 useEffect()🚀
 when we want to run something after rendering the component, useEffect function is used.
@@ -41,5 +41,22 @@ useEffect(()=> {}, []);
 
  Read about Optional Chaining🚀
 
+Shimmer UI🚀
+To improve user experience while the data is being fetched from the API, instead of showing any loading icon, use Shimmer UI. 
+It is basically a fake page that is loaded while the data is being fetched.
 
- 
+When u are rendering the compoenent based on some condition (like in case of shimmer UI), its known as conditional rendering.
+
+ TO MAKE THE INPUT BOX WORK
+ - bind the input box - with the local variable (state)
+
+ Every time local state variable is changing, React rerenders the whole component(body component in this case).
+ IMPORTANT THING🚀 - 
+ every time that event is happening in the input field, the state variable is called.
+ React is rerendering the whole component. But the whole process which is occuring behind the scene is -
+ The whole component is rerendered, but react will first perform the reconcilation cycle. It will find the difference between the old virtual DOM and new virtual DOM
+ then it will only update the changes, but whole component is rerendered.
+
+WHAT MAKES REACT FAST? WHY IS REACT FAST?🚀
+react is fast because of its reconcilation algorithm. this algorithm uses the concept of virtual DOM. It finds the difference between old virtual DOM and new virtual DOM
+and only update the portion that is required. 
