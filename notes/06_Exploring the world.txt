@@ -60,3 +60,13 @@ When u are rendering the compoenent based on some condition (like in case of shi
 WHAT MAKES REACT FAST? WHY IS REACT FAST?🚀
 react is fast because of its reconcilation algorithm. this algorithm uses the concept of virtual DOM. It finds the difference between old virtual DOM and new virtual DOM
 and only update the portion that is required. 
+
+
+IN 6.1 SWIGGY ISSUE RESOLVED🚀
+explained how to fetch data from live API, as the data was different from what he taught previously.
+
+IN 6.2 CORS plugin issue RESOLVED🚀
+he told to use corsproxy.io to bypass CORS error. (NOT WORKING FOR US, THE WEBSITE IS BLOCKED).
+
+Read about CORS error🚀
+

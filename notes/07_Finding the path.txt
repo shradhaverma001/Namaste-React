@@ -1,0 +1,36 @@
+IMPORTANT THINGS ABOUT useEffect()🚀
+
+1) It takes 2 arguments one is callback function, other is dependency array.
+2) dependency array parameter is not mandatory.
+CASES -
+CASE 1 - 
+if we don't provide 2nd argement, that is dependency array, then the useEffect callback function will run everytime the component is rendered.
+i.e, if no dependency array => useEffect is called on every render.
+CASE 2-
+if dependency array is empty = [] => useEffect is called on initial render(just once).
+CASE 3 -
+if dependency array contains something(variable, i.e, dependency), then => useEffect is called everytime that dependency(variable) is updated.
+
+INDUSTRY PRACTICES FOR useState()🚀
+- Never use hooks outside of the functional component.
+- Always define hooks on the top of the components.
+- never use hooks inside if conditions or for loops etc.
+
+ROUTERS🚀
+install router from react -
+command - npm i react-router-dom
+
+import createBrowserRouter and RouterProvider from this library.
+createBrowserRouter is used to create the configuration .
+RouterProvider is used to render that configuration in the root.
+
+Outlet component by react dom🚀
+When u want to create the children routes, to render that routes accordingly, we use Outlet component.
+When we change the routes the outlet will be replaced by that component.
+And user can't even see that we have use outlet in the onspect window as well. Because it is replaced be the component.
+
+FOR FIXED HEADERS AND FOOTERS🚀
+U can embed the other child components into the main component where header is present.
+
+FOR CHILDREN ROUTES🚀
+
