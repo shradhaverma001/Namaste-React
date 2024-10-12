@@ -21,7 +21,7 @@ Each service has its own job.
 
 
 
-API Call inside react
+API Call inside react🚀
 2 Approaches how we fetch the data from Backend and which one to use
 
 1) As soon as the application loads, we will call the API, when the data comes, then we will render the UI.

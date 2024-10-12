@@ -34,3 +34,41 @@ U can embed the other child components into the main component where header is p
 
 FOR CHILDREN ROUTES🚀
 
+LINK COMPONENT🚀
+The component is provided by react-router-dom.
+This is a powerful component which prevents the whole page from reloading while we are going to different page(changing routes like about, contact).
+This makes the react app faster.
+
+SINGLE PAGE APPLICATION🚀
+This phenomenon in which we are just loading that particular content and not the whole page makes the application as single page application.
+React applications are known as single page application.
+whole application work inside a component. and all other things are just interchanging components(routes, pages).
+
+Proper defination- In single page application, network call is made only once as all the components gets loaded at that time via client side routing.
+
+2 TYPES OF ROUTING🚀
+1) CLIENT SIDE ROUTING -
+    It means network call is made only once, and all the components gets loaded at that time. and when we are changing the routes, we are just interchanging the components.
+
+2) SERVER SIDE ROUTING -
+    It means whenever we are changing the routes, each time we are making network calls to the server and it will reloads the page.
+
+ANOTHER SUPERPOWER (HOOK) TO READ PARAMETERS FROM THE URL (API CALL)
+useParams()🚀 - 
+This is provided by react-router-dom
+
+resids - 
+603438
+498382
+
+THREE IMPORTANT ROUTES TO KEEP IN MIND🚀
+1) createBrowserRouter - use to create the routes - create router configuration.
+2) RouterProvider - use to provide router connectivity with the createBrowserRouter.
+3) useRouteError - use to read error message from the browser console and make our own custom error page.
+
+LINK component is a wrapper over the anchor tag.
+If u check in browser console, wherever we have used link component, in console, it will Always be a anchor tag. 
+Its because link internally uses anchor tag, itself. only diff is it keeps track of the parent component and does not reload the page.
+
+
+
