@@ -86,3 +86,8 @@
     margin: 10px;
     padding: 5px;
 }
+
+.user {
+    padding: 10px;
+    border: 2px solid black;
+}

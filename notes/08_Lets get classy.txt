@@ -1,0 +1,96 @@
+CLASS BASED COMPONENT🚀
+
+Syntax - 
+class classname extends React.compoenent {
+    render(){
+        <div>JSX</div>
+    }
+}
+
+Class based component is a JavaScript class which extens the react component and has a render function which returns some piece of JSX.
+
+How to take props in class component.🚀
+using constructor and having super class in it is mandatory.
+
+How to create STATE VARIABLE IN CLASS COMPONENT🚀
+
+In function components, we use hooks.
+But in class component, we use this.state object inside the constructor.
+
+NEVER UPDATE STATE VARIABLES DIRECTLY🚀
+as in function based components, we use set function to update state variables.
+same for class based components, don't update the state variable directly.
+use this.set function to update it.
+=> this.state is an  object.
+=> this.setState is a function which takes an object.
+
+Whatever things are written in the set state function which takes an object, only those will get updated, others will remain same in setState.
+
+MOST IMPORTANT INTERVIEW QUESTION🚀
+=> LIFE CYCLE OF CLASS BASED COMPONENTS🚀
+How this component is put up/loaded/ mounted on the webpage.
+
+When a class based component is called, 
+1) an instance is created of that class.
+2) when an instance is created, constructor is called.
+3) then the render function will called.
+and the DOM gets mounted on the web page.
+
+Also there is one more function called componentDidMount().
+which is mounted/ rendered after the component is mounted on DOM.
+That's why it is used to make API calls in class based components.
+
+So if we console the heirarchy, it will be like this.
+=>  constructor rendered
+    component rendered
+    componentDidMount rendered
+
+
+componentDidMount is rendered after the whole component gets rendered
+when the parent component is rendering, it sees there is a child also, so it will then triggers the life cycle of child component.
+
+If parent and children both are class based component, then heirarchy will be this
+=>  parent constructor rendered
+    parent component rendered
+    child constructor rendered
+    child component rendered
+    child componentdid mount rendered
+    parent componentDidMount rendered
+
+
+MOST IMPORTANT🚀
+CHECK (GOOGLE SEARCH) - REACT LIFECYCLE DIAGRAM
+
+REACT LIFECYCLE DIAGRAM🚀
+React Lifecycle consists of 2 phase -
+1) "Render" phase
+2) "Commit" phase
+
+"render phase" consists of 2 parts - "constructor" and "render"
+"commit phase" consists of 2 parts - "DOM manipulation" and "componentDidMount"
+IMPORTANT =>
+So in class based components, if we have more than one child of same/different class, then 
+(Reason for Why react is fast? also this)
+=> React will optimize it, so it will render the child component in a single batch.
+Mainly it creates a single batch for rendering and another single batch for "commit" phase.
+
+DOM manipulation process is slow.(it takes time)
+So react will create a single batch for the rendering component. So it will render all the child components in one go,
+then, manipulate the DOM.
+
+/*
+- Parent Constructor
+- Parent render
+    - First Constructor
+    - First render
+
+    - Second Constructor
+    - Second Render
+
+    <DOM UPDATED - IN SINGLE BATCH>
+
+    - First componentDidMount
+    - Second componentDidMount
+
+- Parent componentDidMount
+*/
