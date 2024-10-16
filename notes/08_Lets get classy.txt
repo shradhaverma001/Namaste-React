@@ -1,3 +1,4 @@
+VERY IMPORTANT QUESTION FOR INTERVIEWS => CLASS BASED COMPONENTS🚀
 CLASS BASED COMPONENT🚀
 
 Syntax - 
@@ -94,3 +95,27 @@ then, manipulate the DOM.
 
 - Parent componentDidMount
 */
+
+
+/*
+--- MOUNTING---
+    Constructor (dummy)
+    Render(dummy)
+    <HTML Dummy>
+    componentDidMount
+    <API Call>
+    <this.setState> -> State variable is updated
+
+---UPDATING---
+    render(API data)
+    <HTML (new API data)>
+    componentDidUpdate
+
+---UNMOUNTING---
+    componentWillUnmount
+*/
+
+componentWillUnmount is rendered when we move out of that page(component).
+It is used to clean up the mess after moving to other page.
+Like setInterval("string",timer);
+

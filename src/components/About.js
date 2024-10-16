@@ -5,23 +5,23 @@ import { Component } from "react";
 class About extends Component {
     constructor(props) {
         super(props);
-        console.log("Parent Constructor");
+        // console.log("Parent Constructor");
     }
 
     componentDidMount(){
-        console.log("Parent Did Mount");
+        // console.log("Parent Did Mount");
     }
 
     render(){
-        console.log("Parent rendered");
+        // console.log("Parent rendered");
         return (
             <div>
                 <h1>About Us</h1>
             <h1>This is Namaste React web series</h1>
-            <User name = {"Shradha (function)"}/>
             <UserClass name= {"First child"}/>
-            <UserClass name= {"Second child"}/>
+            {/* <UserClass name= {"Second child"}/>
             <UserClass name= {"Third child"}/>
+            <User name = {"Shradha (function)"}/> */}
             </div>
         );
     };
