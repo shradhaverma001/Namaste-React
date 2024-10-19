@@ -15,3 +15,38 @@ Custom hooks means we can create our own hooks.
 
 For example, we can make custom hooks for separating the API calls from the components. 
 So that components will have only one job i.e, just to display the components.
+
+TWO THINGS TO KEEP IN MIND WHILE CREATING CUSTOM HOOKS.
+- what is the input required to that hook.
+- what should be returned from that hook.(what will be the ouput from that hook).
+
+ONE IMPORTANT THING🚀
+Browser provide a special event listener to check the online or offline status of the user, which is addEventListener.
+
+MOST IMPORTANT CONCEPT FOR FRONTEND DESIGN INTERVIEW🚀
+When we run the build, a whole one js file is created which contains all the code of all the components.
+So in case of large scale applications, its not a good thing. 
+Since if there are thousands of compoenents then the application will take a lot of time to load, which is not a good practice.
+So concept of lazy loading comes into picture.
+We can divide/ break the whole js file into different chunks. This concept is known by below names
+- LAZY LOADING🚀
+- CHUNKING
+- DYNAMIC LOADING
+- CODE SPLITTING
+- ON DEMAND LOADING
+LAZY LOADING🚀
+- CHUNKS
+
+
+ERROR🚀
+- Why the error comes when we divide the data into chunks?
+Its because, when we did demand loading,
+for example as soon as we clicked grocery, 
+browser will fetch the data(code), but react is very fast. 
+So meanwhile browser is fetching data, react tries to render the component and it didn't find the code. So it throws error. 
+
+So to handle that state, we use SUSPENSE, GIVEN BY REACT.
+For whichever component you want to create lazy loading, wrap that around suspense and add a fallback to it. 
+Fallback means while the data is being collected, what thing u want to be rendered in the mean time. 
+
+
