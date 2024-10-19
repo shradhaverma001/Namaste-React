@@ -1,0 +1,17 @@
+Single Responsibility Principle🚀 -
+
+Single Responsibility Principle means each component should have only one responsibility to do.
+Means components are functions only. so each function should have only one job to perform.
+
+It should be modular. Modular means same that each function should perform only one job.
+- It helps to make the code more maintainable, testable and reusable.
+ - You can reuse the components like restaurent cards.
+ - If an error occurs, u will be easily able to understand where the error is (which component is throwing error). Can easily be tested. 
+
+Custom Hooks🚀
+
+Hooks are utility functions.
+Custom hooks means we can create our own hooks.
+
+For example, we can make custom hooks for separating the API calls from the components. 
+So that components will have only one job i.e, just to display the components.
