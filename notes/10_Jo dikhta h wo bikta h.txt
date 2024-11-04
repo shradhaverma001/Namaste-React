@@ -1,0 +1,31 @@
+DIFFERENT WAYS TO WRITE CSS🚀
+- NORMAL CSS
+- SASS
+- SCSS
+- STYLED COMPONENTS
+- TAILWIND CSS
+
+We will be using tailwind CSS.
+
+TAILWIND CSS🚀
+
+If u are using tailwind, parcel needs postcssrc to read tailwind.
+
+To install TAILWIND use -
+=> npm install -D tailwindcss postcss
+=> npx tailwindcss init
+- go to tailwind css on google and search for installation and follow the installation process.
+
+and in tailwind.config.js file, modify the content field with the file extensions in which tailwind will be used.
+
+PROS AND CONS OF TAILWIND CSS🚀
+PROS -
+1) No need to switch again and again between the files, like index.css and the js files, to declare a class and and goind to css file to write css.
+2) It takes less memory, tailwind has a feature, that is only whatever css we have used, only that much will get build in the bundle together with the code and not the whole tailwind css bundle.
+which makes it LIGHT WEIGHTED.
+
+CONS -
+1) Code may look bit dirty because we will be writing a lot of css, that will make code a bit ugly.
+2) For me, - I personally found it bit less readable to understand, since with the classnames as container and then applying css, I found it more understandable.
+
+

@@ -94,25 +94,28 @@ if(onlineStatus === false) return <h1>Looks like you are offline! Check your Int
 
     return (
         <div className="body">
-            <div className="filter">
-                <div className="search">
-                    <input type="text" className="seacrh-box" value={searchText} onChange={(e) => {
+            <div className="flex justify-between">
+                <div className="m-4 p-4 flex items-center" >
+                    <button className="px-4 py-1 m-2 bg-orange-300 rounded-lg" onClick={() => {
+                    const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4);
+                        setFilteredRestaurant(filteredList);
+                        }
+                    }
+                    >Top Rated Restaurants</button>
+                </div>
+                <div className="m-4 p-4">
+                    <input type="text" className="border border-black" value={searchText} onChange={(e) => {
                         setSearchText(e.target.value);
                     }}></input>
-                    <button className="search-btn" onClick={() => {
+
+                    <button className="bg-green-300 px-4 py-1 m-4 rounded-lg" onClick={() => {
                         console.log({searchText});
                         const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilteredRestaurant(filteredRestaurant);
                     }}>Search</button>
                 </div>
-                <button className="filter-btn" onClick={() => {
-                const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4);
-                    setFilteredRestaurant(filteredList);
-                    }
-                }
-                >Top Rated Restaurants</button>
             </div>
-            <div className="res-container">
+            <div className="flex flex-wrap">
                 {filteredRestaurant.map((restaurant) => (
                     <Link key = {restaurant.info.id} to = {"/restaurants/" + restaurant.info.id} >
                         <RestaurantCard key={restaurant.info.id} resData={restaurant} />

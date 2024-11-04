@@ -1,4 +1,10 @@
-.header {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* No need to use below normal css. only add above lines to use tailwind in your project. */
+/* .header {
     display: flex;
     justify-content: space-between;
     border: 2px solid black;
@@ -34,7 +40,7 @@
 
 .res-card {
     /* height: 400px; */
-    width: 200px;
+    /* width: 200px;
     padding: 5px;
     margin: 10px;
 }
@@ -90,4 +96,4 @@
 .user {
     padding: 10px;
     border: 2px solid black;
-}
+}  */
