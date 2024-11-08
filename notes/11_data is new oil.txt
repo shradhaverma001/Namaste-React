@@ -1,0 +1,10 @@
+HIGHER ORDER COMPONENTS🚀
+Higher order components are the JS functions which takes a component as an input, then enhance that component and returns
+the enhanced component as an output.
+
+EXAMPLE-
+we see some restaurants cards having promoted label in swiggy. So will create that feature using higher order component.
+
+higher order component does not change/modify the component, it just enhances/ add more features to the component.
+
+CONTROLLED AND UNCONTROLLED COMPONENTS🚀

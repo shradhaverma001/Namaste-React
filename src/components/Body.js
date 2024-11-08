@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {WithOfferLabel} from "./RestaurantCard";
 // import resList from "../utils/mockData";
 import { useEffect, useState } from "react"; 
 import Shimmer from "./Shimmer";
@@ -11,6 +11,10 @@ const Body = () => {
     const [listOfRestaurants, setlistOfRestaurants] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
+    console.log("reslist rendered", listOfRestaurants);
+
+    const OfferCard = WithOfferLabel(RestaurantCard);
+    
     const [searchText, setSearchText] = useState("");
 
     useEffect(()=>{
@@ -96,7 +100,7 @@ if(onlineStatus === false) return <h1>Looks like you are offline! Check your Int
         <div className="body">
             <div className="flex justify-between">
                 <div className="m-4 p-4 flex items-center" >
-                    <button className="px-4 py-1 m-2 bg-orange-300 rounded-lg" onClick={() => {
+                    <button className="px-4 py-1 m-2 bg-orange-300 rounded-lg hover:shadow-lg" onClick={() => {
                     const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4);
                         setFilteredRestaurant(filteredList);
                         }
@@ -108,7 +112,7 @@ if(onlineStatus === false) return <h1>Looks like you are offline! Check your Int
                         setSearchText(e.target.value);
                     }}></input>
 
-                    <button className="bg-green-300 px-4 py-1 m-4 rounded-lg" onClick={() => {
+                    <button className="bg-green-300 px-4 py-1 m-4 rounded-lg hover:shadow-lg" onClick={() => {
                         console.log({searchText});
                         const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilteredRestaurant(filteredRestaurant);
@@ -118,7 +122,7 @@ if(onlineStatus === false) return <h1>Looks like you are offline! Check your Int
             <div className="flex flex-wrap">
                 {filteredRestaurant.map((restaurant) => (
                     <Link key = {restaurant.info.id} to = {"/restaurants/" + restaurant.info.id} >
-                        <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                        {restaurant.info.aggregatedDiscountInfoV3 ? (<OfferCard resData={restaurant} />) : (<RestaurantCard resData={restaurant} />)}
                     </Link>
                 ))}
             </div>
