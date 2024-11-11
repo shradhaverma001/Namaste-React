@@ -11,7 +11,7 @@ const Body = () => {
     const [listOfRestaurants, setlistOfRestaurants] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
-    console.log("reslist rendered", listOfRestaurants);
+    // console.log("reslist rendered", listOfRestaurants);
 
     const OfferCard = WithOfferLabel(RestaurantCard);
     
@@ -27,8 +27,8 @@ const Body = () => {
         );
 
         const json = await(data.json());
-        console.log("restaurant api fetched");
-        console.log(json);
+        // console.log("restaurant api fetched");
+        // console.log(json);
         setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
