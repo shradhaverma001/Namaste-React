@@ -7,4 +7,41 @@ we see some restaurants cards having promoted label in swiggy. So will create th
 
 higher order component does not change/modify the component, it just enhances/ add more features to the component.
 
-CONTROLLED AND UNCONTROLLED COMPONENTS🚀
+We made accordian, the expand and collapse functionality for the category items and added some CSS for making it look good.
+
+USE REACT DEVELOPER TOOLS - COMPONENTS AND PROFILER🚀
+
+COMPONENTS - will show all the react components that we have created. 
+PROFILER - records the React application.
+click on start profiling.
+
+IMPORTANT INTERVIEW QUESTIONS🚀
+1) CONTROLLED AND UNCONTROLLED COMPONENTS🚀
+UNCONTROLLED COMPONENTS🚀-
+When a component is controlling itself, like if any state needs to be changed, it can change its state itself. its called uncontrolled component.
+
+CONTROLLED COMPONENTS🚀-
+When a component is controlled by its parent component, like parent has the control to change its state, its called controlled component.
+
+2) PROPS DRILLING🚀
+Props drilling is the concept of passing the props from the parent to the child.
+Suppose we have a data in the parent component and we need to pass the same in the child's child's child component,
+so we need to pass that data hierarcally from the parent to first child, then second child then the final component.
+So though the data is of no use to the middle component, it still needs to take it from parent to pass it to child.
+This concept is known as props drilling.
+
+Its not a good practice if we need to pass the data to a long hierarchy level. Therefore, for these situations we use React context.
+
+REACT CONTEXT🚀
+Context is like a central store where we can store the data which can be required anywhere in any component, so no need to pass hierarcally.
+Eg - Like we require logged in user name at many places on the website. so context will be helpful here.
+
+CONTEXT HOOKS🚀
+- To create a context, use createContext HOOK.
+- To use/import that context, useContext HOOK is used.
+
+HOW TO USE CONTEXT IN CASE OF CLASS BASED COMPONENTS🚀
+- In class based components, we can use context like - it takes JSX, which consistes of a callback function.
+<contextName.Consumer>
+    {({destructure the data}) => return the data in the tag}
+</contextName.Consumer>
