@@ -1,0 +1,44 @@
+REDUX🚀
+
+1) Use of Redux is not mandatory.
+2) use for handling state of the application.
+3) applicatuon becomes easier to debug.
+
+REDUX TOOLKIT(RTK)🚀
+- New and easier way of using redux.
+
+Redux toolkit(redux)🚀
+It is a whole big JS object which can be directly accessed by any components from anywhere.
+It okay to store all the data inside one object, but for easy understanding, we logically divide the object into pieces called slices.
+eg - cart slice, user slice, etc.
+
+We cannot directly modify the slices.
+
+Trying to make the cart working - i.e, when we click on the item to add it to the cart, it will add that item to the cart to procedd to buy.
+For eg, if we want to modify the cart slice, by clicking on the add button.
+
+PROCESS FOLLOWED WHILE ADDING (WRITE) DATA TO A SLICE🚀
+- When we click on the add button, 
+it "DISPATCHES AN ACTION, THAT ACTION WILL CALL A FUNCTION AND THIS FUNCTION WILL INTERNALLY MODIFIES THAT CART(SLICE)".
+- This function is called as "REDUCER"
+
+PROPER DEFINATION -> When u press the add button, it dispatches an action, which calls a reducer function which updates/modifies the slice of the redux store.
+
+ADD -----> A------> fn() ------> CART
+        Dispatch    Reducer        Slice
+        (ACTION)
+
+PROCESS FOLLOWED WHILE READING DATA TO A SLICE🚀
+- SELECTOR is used to read data from the redux store.
+- And this phenomenon is known as "SUBSCRIBING TO THE STORE".
+- SELECTOR will read the data and return it to the component.
+
+- Let say whenever we add anything to the cart, the cart icon in the header should display no of items in the cart automatically.
+- so it will read the data from the store.
+- so we can say that Header compenent is "subscribed to the store" using a "selector".
+
+INSTALL redux toolkit and react redux🚀
+- npm install @reduxjs/toolkit
+- npm i react-redux
+
+

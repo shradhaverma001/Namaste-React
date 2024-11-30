@@ -45,3 +45,8 @@ HOW TO USE CONTEXT IN CASE OF CLASS BASED COMPONENTS🚀
 <contextName.Consumer>
     {({destructure the data}) => return the data in the tag}
 </contextName.Consumer>
+
+WHEN WE NEED TO MODIFY THE CONTEXT TO THE WHOLE APPLICATION, WE SHOULD WRAP THAT COMPONENT
+- <contextName.Provider value={{key: value}}>
+</contextName.Provider>
+
