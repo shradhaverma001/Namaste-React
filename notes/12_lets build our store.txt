@@ -2,7 +2,7 @@ REDUX🚀
 
 1) Use of Redux is not mandatory.
 2) use for handling state of the application.
-3) applicatuon becomes easier to debug.
+3) application becomes easier to debug.
 
 REDUX TOOLKIT(RTK)🚀
 - New and easier way of using redux.
@@ -41,4 +41,44 @@ INSTALL redux toolkit and react redux🚀
 - npm install @reduxjs/toolkit
 - npm i react-redux
 
+items that are taken by the slice - 
+1) name - name of the slice
+2) initialState - initialState state of the slice (like its an empty array or whatever the initial state is)
+3) reducer - is an object which contains actions that we can take. (eg - addItem, removeItem)
+each action will call a reducer function. 
+NOTE🚀- We are mutating our state in the actions. means directly changing the state itself.
 
+What a slice returns or exports🚀-
+A slice return an object containing two things - action and reducer
+{
+        actions: {
+                additem, removeitems etc 
+        },
+        reducer
+}
+
+so we export 2 things from slice.
+action (which we destructure and a reducer).
+
+If u want to modify a store (with the slices), it also has a big reducer- which modifies the appstore (the STORE) 
+
+add each slice reducer like this -
+reducer: {
+        cart: cartReducer,
+        user: userReducer
+} 
+
+
+TO READ DATA FROM STORE🚀(SUBSCRIBING TO THE STORE🚀)
+
+We use a hook called "useSelector" to subscribe to the store. 
+
+IMPORTANT INTERVIEW QUESTIONS🚀
+1) Whenever you are subscrib ing to the store, make sure u subscribe to the right portion of the store, 
+otherwise it will lead to performance loss. (website will become slow).
+2) don't get confused between reducer, reducers etc.
+ - in appstore, its a whole big "reducer" which will consits of small other reducer.
+ - in slice, it will contain a lot of "reducers"
+ - while exporting, it will export one "reducer" which will be the combination of any of the slice reducer functions.
+ - redux uses immer librrary brhind the scenes.
+ 
