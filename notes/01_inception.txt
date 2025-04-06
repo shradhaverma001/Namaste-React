@@ -14,6 +14,16 @@ When we render it inot DOM, it is converts the React Element to HTML.
 
 React is a JS library not a framework. Its a UI library
 
+COMMANDS TO SETUP APPLICATION -
+- npm init (make sure to change the target name (entry point))
+- npm install -D parcel
+- npx parcel index.html (to start the app)
+- npm insatll react
+- npm install react-dom
+- npm start (to start after adding shortcut in package.json scripts)
+- npm install react-router-dom (to install routers)
+
+
 
 PERSONAL
 Thanks to asynchronous programming! 20 async problems you should not skip practising in Frontend Interviews 🔥
