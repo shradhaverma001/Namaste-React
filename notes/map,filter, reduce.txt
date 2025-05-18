@@ -29,6 +29,14 @@ ANOTHER WAY (ARROW FUNCTiONS)
 const output = arr.map((x) => x.toString(2));
 console.log(output);
 
+ONE MORE IMPORTANT THING FOR map()
+=> If map takes 2 parameters, then one is treated as element and the other as index of that element.
+Eg -
+let arr = [1,2,3];
+let res = arr.map((x,i)=>{ return x + i;});
+console.log(res);
+
+REMEMBER TO ASSIGN THAT MAP METHOD TO A RESULTANT VARIABLE, THEN PRINT THE RESULTANT VARIABLE.
 
 => filter()
 filter is used to filter the contents.
