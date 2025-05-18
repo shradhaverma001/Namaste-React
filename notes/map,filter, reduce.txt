@@ -1,5 +1,7 @@
 // Namaste JS - map(), filter(), reduce() video
 
+FOR MAP AND FILTER, IF AN ARRAY IS PASSED, THEN OUTPUT WILL ALSO BE IN ARRAY FORMAT.
+
 => map()
 map functions are used to transform an array. It transforms each and every element of an array and get a new array out of it.
 
