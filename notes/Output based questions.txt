@@ -1,0 +1,193 @@
+Interview Questions Urban harvest
+
+JS
+
+debouncing, - with real life example - search bar in an e-commerce website
+throttling - with real life example - twitter (X) when a user is scrolling down and like the feed is getting completed, so it make the API call again.
+shallow copy
+deep copy
+promise
+diff between var let and const
+setTimeout - o/p based question - delay in response
+js is synchronous but we can add async behaviour by methods like async/await
+closures
+diff between undefined and null
+Event Loops - remember it clearly explain it with setTimeout example
+Spread operator is used for creating Shallow copy and it just copy the first level of hierarchy and the second and further level are still copied by reference.
+
+
+O/P based questions
+
+React
+
+functional components and class based components diff
+why u used functional components in ur office projects
+difference between virtual DOM and real DOM
+what that feature is called by which react identify when to update the real diff after calculating the diff between two virtual dom.
+what is single page application
+destructuring with an example
+microtasks and macrotasks
+print the values of the keys present in the list of objects
+
+
+Diff b/w undefined and null🚀🚀
+undefined - anything that is declared but not assigned any value. So by default JavScript assign that variable value to undefined.
+null - We only intentionally assign the value of any variable to null. means assigning an empty value to it.
+
+
+O/P based questions
+
+console.log(typeof undefined);	-> undefined
+console.log(NaN == NaN)		-> false 
+
+(reason is, NaN represents a value that is not a real number or is the result of an undefined or invalid operation, and since it’s an "unknown" value, the language spec treats it as unequal to everything, including another NaN.
+
+
+console.log(isNaN("hi"));	-> true
+console.log(Number.isNaN("hi"));	-> false
+
+isNaN("hi") → true
+The global isNaN() coerces the input to a number first.
+
+"hi" gets coerced to NaN, because it's not a numeric string.
+
+Then isNaN(NaN) is evaluated → true.
+
+2. Number.isNaN("hi") → false
+Number.isNaN() does not perform type coercion.
+
+It only returns true if the value is exactly the NaN value, not just "something that becomes NaN when coerced".
+
+console.log(Number.isNaN(NaN)); 	-> true
+only this case will be true for Number.isNaN
+
+console.log(typeof NaN);	-> number
+console.log(typeof null);	-> object (It's known error in JS)
+console.log([] == false);	-> true (type coercion to string)
+console.log([] === false);	-> false (not perform type coercion in strict check)
+
+let a = NaN;
+let b = a;
+console.log(a == b);	-> false
+
+question ->
+const obj = {
+  a: "hello",
+  b: {
+    c: "world",
+  },
+};
+const clone = { ...obj };
+clone.b.c = "changed";
+console.log(obj.b.c);
+
+O/P -> "changed"
+Its because Spread operator is used for creating Shallow copy of the objects and it just copy the first level of hierarchy and the second and further level are still copied by reference.
+so here, we are changing the second level, so it was copied by reference, so  when we changed it in clone, it got changed in obj as well.
+
+Slice operator also works same as spread operator, i.e, used to create shallow copy and copies till the first level of hierarchy.
+
+
+let a = [1, 2, 3];
+let b = a;
+a = [4, 5, 6];
+console.log(b);
+
+O/P ->	[1,2,3]
+
+let a = [1, 2, 3];
+
+a is a reference to the array [1, 2, 3].
+
+let b = a;
+
+b is now pointing to the same array as a.
+
+b = [4, 5, 6];
+
+Now you're reassigning b to a new array.
+
+This does not affect a — a still points to [1, 2, 3].
+
+console.log(a);
+
+Outputs the array that a still references → [1, 2, 3].
+
+
+
+Question - 
+If you want to change the contents of the shared array, you'd do something like:
+
+let a = [1, 2, 3];
+let b = a;
+b[0] = 99;
+console.log(a); // ➜ [99, 2, 3]
+
+
+
+SLICE OPERATOR -
+
+1) 
+const arr = [1, 2, 3];
+const copy = arr.slice();
+
+copy[0] = 99;
+console.log(arr);  // [1, 2, 3] → original unchanged
+
+2)
+const arr = [1, 2, 3];
+const copy = [...arr];	// spread operator same output
+
+copy[0] = 99;
+console.log(arr);	// [1, 2, 3] → original unchanged
+
+3) 
+const arr = [{ a: 1 }, { b: 2 }];
+const copy = arr.slice();
+
+copy[0].a = 999;
+console.log(arr[0].a);  // 999 → original **was changed**
+
+as second level, stored with reference
+
+
+
+when we compare with (==) operator, then in case of primitive data type, it compares th actual value, but in case of non primitive data types(like objects), it comapres by reference, that is, both points to same object or not.
+
+
+print the values of the keys present in the list of objects in react
+Output = red #f00
+green #0f0
+blue #00f
+and so on.
+[
+	{
+		color: "red",
+		value: "#f00"
+	},
+	{
+		color: "green",
+		value: "#0f0"
+	},
+	{
+		color: "blue",
+		value: "#00f"
+	},
+	{
+		color: "cyan",
+		value: "#0ff"
+	},
+	{
+		color: "magenta",
+		value: "#f0f"
+	},
+	{
+		color: "yellow",
+		value: "#ff0"
+	},
+	{
+		color: "black",
+		value: "#000"
+	}
+]
+FrontEnd Developer - First Round
